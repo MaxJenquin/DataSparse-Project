@@ -305,7 +305,7 @@ function correction = detlemma_correction_rskelf(factors,noise)
     for fact_idx=1:num_factors
         full_diag = kron(full_diag,rskelf_diag(factors{fact_idx},1));
     end
-    correction = sum(1+noise*full_diag);
+    correction = sum(reallog(1+noise*full_diag));
 end
 
 function correction = detlemma_correction_hodlr(factors,noise)
@@ -319,7 +319,7 @@ function correction = detlemma_correction_hodlr(factors,noise)
     for fact_idx=1:num_factors
         full_diag = kron(full_diag,diag(inv(factors{fact_idx})));
     end
-    correction = sum(1+noise*full_diag);
+    correction = sum(reallog(1+noise*full_diag));
 end
  
 function y = toeplitzmult(A, x)
