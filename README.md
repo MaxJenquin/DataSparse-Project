@@ -1,4 +1,4 @@
-# DataSparse-Project
+# Using Hierarchical Matrices to SKI Faster
 Course Project Resources for CS 6220 Spring 2020
 
 
